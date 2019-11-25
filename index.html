@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="css/styles.css">
+<!-- <script src="http://dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script> -->
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+<script src="picture-in-picture.js"></script>
+
+
+<h1>Steganography web page</h1>
+<h3>NOTE: images must be same width <br>
+    NOTE: images on screen are shaped to fit a 200pt box</h3>
+
+
+
+<canvas id="canv1">
+</canvas>
+
+<canvas id="canv2">
+</canvas>
+
+<canvas id="canv3">
+</canvas>
+
+<canvas id="canv4">
+</canvas>
+
+<p>
+Public Image: <input type="file" multiple="false"
+       accept="image/*" id="public"
+       onchange="loadPublicImage()">
+</p>
+<p>
+Hidden Image: <input type="file" multiple="false"
+       accept="image/*" id="hidden"
+       onchange="loadHiddenImage()">
+</p>
+<p>
+<input type="button" 
+ id="btn1"
+ value="Create Merged Image"  
+ onclick=mergedImage()>
+ <input type="button" 
+ id="btn2"
+ value="Extract Hidden Image"  
+ onclick=extractHiddenImage()>
+</p>
+<p>
+ <input type="button" 
+ id="btn3"
+ value="Clear canvases"  
+ onclick=clearCanvas()>
+</p>
+
